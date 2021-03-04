@@ -1,0 +1,91 @@
+.component-sub-process-form {
+    width: 100%;
+    height: calc(100% - 30px);
+    margin: 15px 0;
+    padding: 25px;
+    box-shadow: 0 1px 5px #ccc;
+    border-radius: 5px;
+    background-color: #F9F9F9;
+    overflow: auto;
+}
+
+.component-sub-process-form .header h6 {
+    font-size: 15px;
+    color: #318BF1;
+}
+
+.component-sub-process-form .header h4 {
+    font-size: 17px;
+    font-weight: bold;
+    color: #022B5A;
+}
+
+.component-sub-process-form mat-expansion-panel {
+    padding: 10px 0;
+}
+
+.component-sub-process-form mat-expansion-panel-header {
+    flex-direction: row-reverse;
+}
+
+.component-sub-process-form mat-panel-title {
+    display: block;
+    margin: 0 15px;
+}
+
+.component-sub-process-form mat-panel-title h6 {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #C6C6C6;
+}
+
+.component-sub-process-form mat-panel-title h4 {
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: #022B5A;
+}
+
+.component-sub-process-form .mat-expansion-panel {
+    box-shadow: none;
+}
+
+.component-sub-process-form .mat-radio-button {
+    margin-right: 25px;
+}
+
+.component-sub-process-form .mat-checkbox {
+    margin-right: 25px;
+}
+
+.component-sub-process-form .form-actions {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.component-sub-process-form .form-actions button.reset {
+    margin-right: 15px;
+    color: #000000;
+    background-color: #ECECEC;
+    border: none;
+}
+
+.component-sub-process-form .form-actions button.submit {
+    color: #ffffff;
+    background-color: #318BF1;
+    border: none;
+}
+
+.form-section-group {
+    margin-bottom: 35px;
+}
+
+.form-section-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-section-group h5 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1A1A1A;
+}

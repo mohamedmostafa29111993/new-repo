@@ -1,0 +1,37 @@
+<li class="nav-item dropdown nav-user-menu" ngbDropdown>
+  <a
+    href="javascript:;"
+    class="nav-link"
+    ngbDropdownToggle
+    (click)="showMenue = !showMenue"
+  >
+    <img
+      class="user-image img-circle elevation-2"
+      src="assets/img/user.png"
+      alt="User Image"
+    />
+  </a>
+  <div
+    [class.d-block]="showMenue"
+    class="dropdown-menu dropdown-menu-right"
+    ngbDropdownMenu
+  >
+    <a
+      (click)="showMenue = !showMenue"
+      ngbDropdownItem
+      class="dropdown-item"
+      [routerLink]="['users/update-password']"
+    >
+      <i class="fas fa-user-edit"></i> UpdatePassword
+    </a>
+    <a
+      (click)="showMenue = !showMenue"
+      ngbDropdownItem
+      class="dropdown-item"
+      href="javascript:;"
+      (click)="logout()"
+    >
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+  </div>
+</li>

@@ -1,0 +1,16 @@
+.tree-header {
+    border-top: 2px solid #ECECEC;
+    padding: 10px 25px;
+    background-color: #f0f7fe;
+}
+
+.tree-header .sector-text {
+    font-size: 13px;
+    color: #adafb1;
+}
+
+.tree-header .department-text {
+    font-size: 18px;
+    font-weight: bold;
+    color: #062f5d;
+}

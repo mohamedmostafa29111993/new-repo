@@ -1,0 +1,90 @@
+{
+  "kpis-tree-data": [
+    {
+      "nodeType": "section",
+      "nodeText": "Section #1",
+      "children": [
+        {
+          "nodeType": "outcome_classification",
+          "nodeText": "Outcome",
+          "nodeActions": [
+            {
+              "nodeActionText": "Add Outcome KPI",
+              "nodeAactionType": "outcome_kpi"
+            }
+          ],
+          "children": [
+            {
+              "nodeType": "outcome_kpi",
+              "nodeText": "Outcome #1",
+              "nodeActions": [
+                {
+                  "nodeActionText": "Add Assumption KPI",
+                  "nodeAactionType": "assumption_kpi"
+                },
+                {
+                  "nodeActionText": "Add Process KPI",
+                  "nodeAactionType": "process_kpi"
+                }
+              ],
+              "children": [
+                {
+                  "nodeType": "assumption_kpi",
+                  "nodeText": "Assumption #1",
+                  "nodeActions": [
+                    {
+                      "nodeActionText": "Add Sub Assumption KPI",
+                      "nodeAactionType": "sub_assumption_kpi"
+                    },
+                    {
+                      "nodeActionText": "Add Process KPI",
+                      "nodeAactionType": "process_kpi"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "nodeType": "process_kpi",
+                      "nodeText": "Process #1",
+                      "nodeActions": [
+                        {
+                          "nodeActionText": "Add Sub Process KPI",
+                          "nodeAactionType": "sub_process_kpi"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "nodeType": "sub_process_kpi",
+                          "nodeText": "Sub Process #1"
+                        }
+                      ]
+                    },
+                    {
+                      "nodeType": "sub_assumption_kpi",
+                      "nodeText": "Sub Assumption #1"
+                    }
+                  ]
+                },
+                {
+                  "nodeType": "process_kpi",
+                  "nodeText": "Process #2",
+                  "nodeActions": [
+                    {
+                      "nodeActionText": "Add Sub Process KPI",
+                      "nodeAactionType": "sub_process_kpi"
+                    }
+                  ],
+                  "children": [
+                    {
+                      "nodeType": "sub_process_kpi",
+                      "nodeText": "Sub Process #2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

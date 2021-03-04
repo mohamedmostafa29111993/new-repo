@@ -1,0 +1,32 @@
+{
+  "processes-tree-data": [
+    {
+      "nodeType": "section",
+      "nodeText": "Section #1",
+      "nodeActions": [
+        {
+          "nodeActionText": "Add Process",
+          "nodeAactionType": "process"
+        }
+      ],
+      "children": [
+        {
+          "nodeType": "process",
+          "nodeText": "Process #1",
+          "nodeActions": [
+            {
+              "nodeActionText": "Add Sub Process",
+              "nodeAactionType": "sub_process"
+            }
+          ],
+          "children": [
+            {
+              "nodeType": "sub_process",
+              "nodeText": "Sub Process #1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

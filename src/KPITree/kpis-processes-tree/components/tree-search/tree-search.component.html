@@ -1,0 +1,39 @@
+<form [formGroup]="treeSearchFormGroup" (ngSubmit)="handleTreeSearch()">
+  <div class="input-group sector-input-group">
+    <mat-form-field class="sector-select" appearance="fill">
+      <mat-label>Select Sector</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let sector of sectors" [value]="sector.value">
+          {{ sector.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="input-group department-input-group">
+    <mat-form-field class="department-autocomplete">
+      <mat-label>Search Department</mat-label>
+      <input
+        type="text"
+        placeholder="Pick Department"
+        aria-label="Department"
+        matInput
+        formControlName="departmentControl"
+        [matAutocomplete]="auto"
+      />
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option
+          *ngFor="
+            let departmentOption of departmentOptions
+              | treeSearch: treeSearchFormGroup.get('departmentControl').value
+          "
+          [value]="departmentOption"
+        >
+          {{ departmentOption }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <button type="submit">
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</form>

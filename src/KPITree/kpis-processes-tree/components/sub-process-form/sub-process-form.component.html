@@ -1,0 +1,51 @@
+<div class="component-sub-process-form">
+  <div class="compmonent-content-wrapper">
+    <div class="header mb-3">
+      <h6>CC-11</h6>
+      <h4>Sub Process One</h4>
+    </div>
+    <mat-divider></mat-divider>
+    <form>
+      <mat-accordion multi>
+        <mat-expansion-panel [expanded]="true">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <h6>STEP 1</h6>
+              <h4>Outcome effect</h4>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="form-section-group">
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="Financial">Financial</mat-radio-button>
+              <mat-radio-button value="Customer Satisfaction"
+                >Customer Satisfaction</mat-radio-button
+              >
+              <mat-radio-button value="Quality">Quality</mat-radio-button>
+            </mat-radio-group>
+          </div>
+          <div class="form-section-group">
+            <h5>output type</h5>
+            <section class="mat-checkbox-group">
+              <mat-checkbox>CPV</mat-checkbox>
+              <mat-checkbox>Volume</mat-checkbox>
+            </section>
+          </div>
+          <div class="form-section-group">
+            <h5>Dimension / scope</h5>
+            <mat-radio-group aria-label="Select an option">
+              <mat-radio-button value="Cost">Cost</mat-radio-button>
+              <mat-radio-button value="Revenue">Revenue</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-divider></mat-divider>
+      <div class="form-actions mt-3">
+        <button type="submit" class="btn btn-primary submit">
+          Create Process
+        </button>
+        <button type="reset" class="btn btn-secondary reset">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

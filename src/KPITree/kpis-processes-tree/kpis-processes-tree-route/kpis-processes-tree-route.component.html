@@ -1,0 +1,38 @@
+<main class="kpis-processes-tree-route">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-lg-4">
+        <div class="kpis-processes-tree-route-sidebar">
+          <tree-search></tree-search>
+          <div class="tree-header">
+            <h6 class="sector-text">Sector One</h6>
+            <h3 class="department-text">CALL CENTER DEPARTMENT</h3>
+          </div>
+          <tabset>
+            <tab heading="KPI Tree">
+              <div
+                class="tab-pane active"
+                role="tabpanel"
+                id="kpis-tree-container"
+              >
+                <kpis-tree></kpis-tree>
+              </div>
+            </tab>
+            <tab heading="Process List">
+              <div
+                class="tab-pane"
+                role="tabpanel"
+                id="processes-tree-container"
+              >
+                <processes-tree></processes-tree>
+              </div>
+            </tab>
+          </tabset>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-8">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</main>

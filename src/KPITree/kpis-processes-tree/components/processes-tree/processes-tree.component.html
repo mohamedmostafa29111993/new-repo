@@ -1,0 +1,88 @@
+<div class="tree processes-tree">
+  <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+    <mat-tree-node
+      class="level-node"
+      *matTreeNodeDef="let node"
+      matTreeNodePadding
+      [class]="node.nodeType + '-node'"
+    >
+      <button
+        class="node-not-expand"
+        [ngClass]="{
+          node_expand: treeControl.isExpanded(node),
+          node_not_expand: !treeControl.isExpanded(node)
+        }"
+        mat-button
+        matTreeNodeToggle
+        [attr.aria-label]="'Toggle ' + node.nodeText"
+        *ngIf="node.nodeExpandable"
+      >
+        <mat-icon class="mat-icon-rtl-mirror">
+          {{ treeControl.isExpanded(node) ? "expand_more" : "chevron_right" }}
+        </mat-icon>
+      </button>
+      <button
+        class="node-not-expand"
+        mat-button
+        matTreeNodeToggle
+        [attr.aria-label]="'Toggle ' + node.nodeText"
+        *ngIf="!node.nodeExpandable"
+      >
+        <mat-icon class="mat-icon-rtl-mirror">chevron_right</mat-icon>
+      </button>
+      <button
+        class="node-tooltip"
+        mat-button
+        matTooltip="Info about the action"
+        matTooltipPosition="above"
+        aria-label="Button that displays a tooltip that can be programatically disabled"
+      >
+        <i class="fas fa-exclamation"></i>
+      </button>
+      <p class="node-text">{{ node.nodeText }}</p>
+      <button
+        *ngIf="node.nodeActions"
+        class="node-actions"
+        mat-icon-button
+        [matMenuTriggerFor]="menu"
+        aria-label="Example icon-button with a menu"
+      >
+        <mat-icon>more_horiz</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button
+          mat-menu-item
+          *ngFor="let nodeAction of node.nodeActions"
+          [class]="nodeAction.actionType"
+          (click)="addNewNode(node, nodeAction)"
+        >
+          <span>{{ nodeAction.nodeActionText }}</span>
+        </button>
+      </mat-menu>
+    </mat-tree-node>
+    <!-- ************************************************************************ -->
+    <!-- ************************************************************************ -->
+    <mat-tree-node
+      #addNewNodeForm
+      class="add-new-node-form"
+      *matTreeNodeDef="let node; when: hasNoContent"
+      matTreeNodePadding
+    >
+      <input
+        type="text"
+        class="form-control add-node-text"
+        #nodeTextValue
+        placeholder="Ex. New Outcome"
+      />
+      <button
+        class="add-node-btn"
+        (click)="saveNode(node, selectedNodeActionType, nodeTextValue.value)"
+      >
+        <i class="fas fa-plus"></i>
+      </button>
+      <button class="close-add-node" (click)="handleCloseAddNode()">
+        <i class="fas fa-times"></i>
+      </button>
+    </mat-tree-node>
+  </mat-tree>
+</div>
